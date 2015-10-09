@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Angular YouTube</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+        <link rel="stylesheet" href="css/video-player.css" />
+    </head>
+    <body ng-app="demo">
+        <header>
+            <div class="container">
+                <h1>Angular YouTube Embed</h1>
+                <p>Embed a YouTube player with a simple directive</p>
+            </div>
+        </header>
+        <div ng-controller="testController">
+            <video-player
+                src="ScMzIvxBSi4"
+                posterframe="https://placeholdit.imgix.net/~text?txtsize=33&txt=Click to play&w=560&h=315"
+                autoplay="0"
+                loading-message="Loading...">
+            </video-player>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/angular-youtube.js"></script>
+        <script src="js/test.controller.js"></script>
+    </body>
+</html>
