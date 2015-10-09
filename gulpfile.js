@@ -48,16 +48,6 @@ gulp.task('js', function() {
     .pipe(connect.reload());
 });
 
-// js linting
-gulp.task('linting', function() {
-    return gulp.src([
-        'src/js/**/*.js',
-        '!src/js/vendor/*.js'
-    ])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-});
-
 // default task
 gulp.task('default', ['connect']);
 
