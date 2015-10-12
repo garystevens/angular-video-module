@@ -11,10 +11,8 @@ var rename          = require('gulp-rename'),
     jshint          = require('gulp-jshint'),
     stylish         = require('jshint-stylish'),
     ngAnnotate      = require('gulp-ng-annotate'),
-    sass            = require('gulp-ruby-sass'),
-    autoprefixer    = require('gulp-autoprefixer');
+    fs              = require('fs-extra');
 
-// handle errors (stops the watch task crashing)
 var onError = function(err) {
     gutil.beep();
     gutil.log(gutil.colors.red(err));
@@ -41,15 +39,21 @@ gulp.task('js', function() {
     .pipe(plumber({
         errorHandler: onError
     }))
-    .pipe(concat('app.min.js'))
+    .pipe(concat('angular-video-module.min.js'))
     .pipe(ngAnnotate({ add: true }))
     .pipe(uglify({ mangle: true }))
     .pipe(gulp.dest('dist/'))
     .pipe(connect.reload());
 });
 
+gulp.task('moveCss', function() {
+    fs.copy('src/css/', 'dist/', function (err) {
+        if (err) return console.error(err)
+    });
+});
+
 // default task
 gulp.task('default', ['connect']);
 
 // deploy task
-gulp.task('deploy', ['js']);
+gulp.task('deploy', ['js', 'moveCss']);
