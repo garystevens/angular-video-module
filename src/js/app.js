@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('demo', ['angular-youtube'])
+		.module('demo', ['angular-video-module'])
 		.config(config)
 		.run(run);
 

@@ -10,7 +10,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
-    "jshint-stylish": "^2.0.1",
-    "movefile": "^0.2.1"
+    "jshint-stylish": "^2.0.1"
   }
 }

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angular-youtube', [])
+        .module('angular-video-module', [])
         .directive('videoPlayer', videoPlayer)
         .service('YouTubeService', YouTubeService);
 
