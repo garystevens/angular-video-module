@@ -1,0 +1,24 @@
+{
+  "name": "angular-video-module",
+  "description": "An Angular module to inject the YouTube API and embed a video ",
+  "main": [
+    "dist/app.min.js"
+  ],
+  "keywords": [
+    "Angular",
+    "Youtube",
+    "Video"
+  ],
+  "authors": [
+    "Gary Stevens"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false
+}
