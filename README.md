@@ -4,8 +4,16 @@
 
 ## Installation
 
+via Bower
+
 ```
 $ bower install --save angular-video-module
+```
+
+or via NPM
+
+```
+$ npm install --save angular-video-module
 ```
 
 or the simple way, by including ``/dist/angular-video-module.min.js`` and ``/dist/angular-video-module.css`` into the head of your HTML.
